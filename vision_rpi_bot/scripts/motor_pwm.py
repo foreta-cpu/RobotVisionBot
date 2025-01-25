@@ -30,19 +30,19 @@ pwm_l.start(75)
 # Функция для движения вперёд
 def forward(second):
     print('Forward Moving')
-    GPIO.output(right_motor_a, GPIO.HIGH)
-    GPIO.output(right_motor_b, GPIO.LOW)
-    GPIO.output(left_motor_a, GPIO.LOW)
-    GPIO.output(left_motor_b, GPIO.HIGH)
+    GPIO.output(right_motor_a, GPIO.LOW)
+    GPIO.output(right_motor_b, GPIO.HIGH)
+    GPIO.output(left_motor_a, GPIO.HIGH)
+    GPIO.output(left_motor_b, GPIO.LOW)
     time.sleep(second)
 
 # Функция для движения назад
 def reverse(second):
     print('Reverse Moving')
-    GPIO.output(right_motor_a, GPIO.LOW)
-    GPIO.output(right_motor_b, GPIO.HIGH)
-    GPIO.output(left_motor_a, GPIO.HIGH)
-    GPIO.output(left_motor_b, GPIO.LOW)
+    GPIO.output(right_motor_a, GPIO.HIGH)
+    GPIO.output(right_motor_b, GPIO.LOW)
+    GPIO.output(left_motor_a, GPIO.LOW)
+    GPIO.output(left_motor_b, GPIO.HIGH)
     time.sleep(second)
 
 # Функция для поворота вправо
@@ -50,8 +50,8 @@ def right(second):
     print('Right Moving')
     GPIO.output(right_motor_a, GPIO.LOW)
     GPIO.output(right_motor_b, GPIO.HIGH)
-    GPIO.output(left_motor_a, GPIO.HIGH)
-    GPIO.output(left_motor_b, GPIO.LOW)
+    GPIO.output(left_motor_a, GPIO.LOW)
+    GPIO.output(left_motor_b, GPIO.HIGH)
     time.sleep(second)
 
 # Функция для поворота влево
@@ -59,8 +59,8 @@ def left(second):
     print('Left Moving')
     GPIO.output(right_motor_a, GPIO.HIGH)
     GPIO.output(right_motor_b, GPIO.LOW)
-    GPIO.output(left_motor_a, GPIO.LOW)
-    GPIO.output(left_motor_b, GPIO.HIGH)
+    GPIO.output(left_motor_a, GPIO.HIGH)
+    GPIO.output(left_motor_b, GPIO.LOW)
     time.sleep(second)
 
 # Функция для остановки
